@@ -34,6 +34,7 @@
     <activity android:name=".activity.NewsBrotherActivity"/>
     <activity android:name=".activity.TencentNewsActivity"/>
     <activity android:name=".activity.ImportNewActivity"/>
+    <activity android:name=".activity.customtab.WebviewActivity"/>
 
   </application>
 

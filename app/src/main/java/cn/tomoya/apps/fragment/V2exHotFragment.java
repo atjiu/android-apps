@@ -112,8 +112,9 @@ public class V2exHotFragment extends MyBaseFragment implements
   @Override
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     V2ex v2ex = data.get(position);
+    System.out.println(v2ex.getUrl());
     CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .setToolbarColor(getResources().getColor(R.color.colorPrimary))        .setShowTitle(true)        .addDefaultShareMenuItem()        .build();
+        .setToolbarColor(getResources().getColor(R.color.colorPrimary)).setShowTitle(true).addDefaultShareMenuItem().build();
     CustomTabActivityHelper.openCustomTab(
         getActivity(), customTabsIntent, Uri.parse(v2ex.getUrl()), new WebviewFallback());
   }

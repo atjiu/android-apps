@@ -87,8 +87,7 @@ public class SegmentFaultRecommendFragment extends MyBaseFragment implements
         Element body = (Element) result;
         Elements streamEles = body.getElementsByClass("stream-list__item");
         for (Element streamE : streamEles) {
-          String rank = streamE.getElementsByClass("blog-rank").first().getElementsByClass("votes").first().ownText() + "/" +
-              streamE.getElementsByClass("blog-rank").first().getElementsByClass("views").first().ownText();
+          String rank = streamE.getElementsByClass("blog-rank").first().getElementsByClass("stream__item-zan-number").first().ownText() + " 赞";
           String title = streamE.getElementsByClass("title").first().text();
           String href = "https://segmentfault.com" + streamE.getElementsByClass("title").first().getElementsByTag("a").first().attr("href");
           String desc = streamE.getElementsByClass("excerpt").first().text();
@@ -130,7 +129,7 @@ public class SegmentFaultRecommendFragment extends MyBaseFragment implements
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     Map<String, String> map = data.get(position);
     CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .setToolbarColor(getResources().getColor(R.color.colorPrimary))        .setShowTitle(true)        .addDefaultShareMenuItem()        .build();
+        .setToolbarColor(getResources().getColor(R.color.colorPrimary)).setShowTitle(true).addDefaultShareMenuItem().build();
     CustomTabActivityHelper.openCustomTab(
         getActivity(), customTabsIntent, Uri.parse(map.get("href")), new WebviewFallback());
   }

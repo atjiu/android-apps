@@ -113,7 +113,7 @@ public class V2exLatestFragment extends MyBaseFragment implements
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     V2ex v2ex = data.get(position);
     CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .setToolbarColor(getResources().getColor(R.color.colorPrimary))        .setShowTitle(true)        .addDefaultShareMenuItem()        .build();
+        .setToolbarColor(getResources().getColor(R.color.colorPrimary)).setShowTitle(true).addDefaultShareMenuItem().build();
     CustomTabActivityHelper.openCustomTab(
         getActivity(), customTabsIntent, Uri.parse(v2ex.getUrl()), new WebviewFallback());
   }

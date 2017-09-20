@@ -135,7 +135,7 @@ public class TencentNewsFragment extends MyBaseFragment implements
     Map<String, Object> map = data.get(position);
     String topic_id = map.get("url").toString();
     CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .setToolbarColor(getResources().getColor(R.color.colorPrimary))        .setShowTitle(true)        .addDefaultShareMenuItem()        .build();
+        .setToolbarColor(getResources().getColor(R.color.colorPrimary)).setShowTitle(true).addDefaultShareMenuItem().build();
     CustomTabActivityHelper.openCustomTab(
         getActivity(), customTabsIntent, Uri.parse(topic_id), new WebviewFallback());
   }

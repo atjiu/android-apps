@@ -105,7 +105,7 @@ public class TencentHuaTiFragment extends MyBaseFragment implements
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     Map<String, Object> map = data.get(position);
     CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .setToolbarColor(getResources().getColor(R.color.colorPrimary))        .setShowTitle(true)        .addDefaultShareMenuItem()        .build();
+        .setToolbarColor(getResources().getColor(R.color.colorPrimary)).setShowTitle(true).addDefaultShareMenuItem().build();
     CustomTabActivityHelper.openCustomTab(
         getActivity(), customTabsIntent, Uri.parse(map.get("mobile_url").toString()), new WebviewFallback());
   }
