@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="@drawable/touch_bg"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_alignParentLeft="true"
+  android:padding="10dp">
+
+  <ImageView
+    android:id="@+id/img"
+    tools:background="@mipmap/ic_launcher"
+    android:layout_marginRight="6dp"
+    android:layout_width="70dp"
+    android:layout_height="50dp"/>
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/img"
+    android:paddingRight="6dp"
+    tools:text="title"
+    android:textColor="@android:color/black"
+    android:textSize="16sp"/>
+
+  <TextView
+    android:id="@+id/desc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/title"
+    android:layout_below="@+id/title"
+    android:ellipsize="end"
+    android:lines="2"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    android:text="desc"/>
+
+  <TextView
+    android:id="@+id/time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/desc"
+    android:paddingRight="6dp"
+    android:layout_alignLeft="@+id/title"
+    tools:text="time"/>
+
+  <TextView
+    android:id="@+id/catagray"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/desc"
+    android:layout_toRightOf="@+id/time"
+    tools:text="catagray"/>
+
+  <TextView
+    android:id="@+id/replyCount"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignRight="@+id/title"
+    android:layout_below="@+id/desc"
+    android:drawableLeft="@drawable/ic_chat_gray_20dp"
+    android:drawablePadding="6dp"
+    tools:text="0"
+    android:textAlignment="center"/>
+
+</RelativeLayout>

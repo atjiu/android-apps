@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal"
+  android:padding="10dp">
+
+  <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_weight="7">
+
+    <TextView
+      android:id="@+id/title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingRight="6dp"
+      android:textColor="@android:color/black"
+      android:textSize="16sp"
+      tools:text="title"/>
+
+    <TextView
+      android:id="@+id/desc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/title"
+      android:layout_below="@+id/title"
+      android:ellipsize="end"
+      android:lines="2"
+      android:paddingBottom="6dp"
+      android:paddingTop="6dp"
+      tools:text="desc"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/avatar"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:layout_alignLeft="@+id/desc"
+      android:layout_below="@+id/desc"/>
+
+    <TextView
+      android:id="@+id/time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/desc"
+      android:layout_toRightOf="@+id/avatar"
+      android:paddingLeft="6dp"
+      tools:text="time"/>
+
+    <TextView
+      android:id="@+id/replyCount"
+      android:layout_width="50dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_alignRight="@+id/title"
+      android:layout_below="@+id/desc"
+      android:drawableLeft="@drawable/ic_chat_gray_20dp"
+      android:drawablePadding="6dp"
+      android:textAlignment="center"
+      tools:text="0"/>
+
+  </RelativeLayout>
+
+  <ImageView
+    android:id="@+id/readFirstImg"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginLeft="10dp"
+    android:layout_weight="1"
+    android:background="#f5f4f4"
+    android:visibility="gone"/>
+</LinearLayout>
