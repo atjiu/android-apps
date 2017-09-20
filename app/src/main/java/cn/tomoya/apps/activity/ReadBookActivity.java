@@ -90,7 +90,6 @@ public class ReadBookActivity extends BaseActivity implements
         runOnUiThread(new Runnable() {
           @Override
           public void run() {
-            System.out.println(result.toString());
             if (href.contains(JsoupUtil.BOLUOXS)) {
               String content = ((Element) result).getElementById("book_text").html();
               contentTv.setText(Html.fromHtml(content));

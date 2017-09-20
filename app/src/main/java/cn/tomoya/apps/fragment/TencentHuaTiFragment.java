@@ -85,7 +85,6 @@ public class TencentHuaTiFragment extends MyBaseFragment implements
       public void output(Object result) {
         String body = (String) result;
         body = body.substring(9, body.lastIndexOf(")"));
-        System.out.println(body);
         Map map = GsonUtil.getInstance().fromJson(body, new TypeToken<HashMap>() {
         }.getType());
         data.addAll((Collection<? extends Map<String, Object>>) map.get("newlist"));
