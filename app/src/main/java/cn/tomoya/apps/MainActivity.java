@@ -29,7 +29,7 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    viewPager = (ViewPager) findViewById(R.id.home_view_pager);
+    viewPager = findViewById(R.id.home_view_pager);
     viewPager.setOffscreenPageLimit(2);
     viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
@@ -39,6 +39,7 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
           case 0:
             return todoFragment;
           case 1:
+            viewPager.setCurrentItem(position);
             return newsFragment;
           case 2:
             return bookFragment;
@@ -50,9 +51,10 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
       public int getCount() {
         return 3;
       }
+
     });
     viewPager.addOnPageChangeListener(this);
-    navigation = (BottomNavigationView) findViewById(R.id.navigation);
+    navigation = findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     runOnUiThread(new Runnable() {
       @Override

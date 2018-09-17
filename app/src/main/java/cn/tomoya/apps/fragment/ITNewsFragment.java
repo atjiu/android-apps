@@ -87,9 +87,9 @@ public class ITNewsFragment extends MyBaseFragment implements AdapterView.OnItem
     } else if (name.equals(getString(R.string.segmentfault))) {
       Intent intent = new Intent(getActivity(), SegmentFaultActivity.class);
       startActivity(intent);
-    } else if (name.equals(getString(R.string.ithome))) {
-      Intent intent = new Intent(getActivity(), ITHomeActivity.class);
-      startActivity(intent);
+//    } else if (name.equals(getString(R.string.ithome))) {
+//      Intent intent = new Intent(getActivity(), ITHomeActivity.class);
+//      startActivity(intent);
     } else if (name.equals(getString(R.string.v2ex))) {
       Intent intent = new Intent(getActivity(), V2exActivity.class);
       startActivity(intent);
@@ -134,10 +134,10 @@ public class ITNewsFragment extends MyBaseFragment implements AdapterView.OnItem
     segmentfault_map.put("logo", R.drawable.segmentfault);
     data.add(segmentfault_map);
 
-    Map ithome_map = new HashMap();
-    ithome_map.put("name", getString(R.string.ithome));
-    ithome_map.put("logo", R.drawable.ithome);
-    data.add(ithome_map);
+//    Map ithome_map = new HashMap();
+//    ithome_map.put("name", getString(R.string.ithome));
+//    ithome_map.put("logo", R.drawable.ithome);
+//    data.add(ithome_map);
 
     Map v2ex_map = new HashMap();
     v2ex_map.put("name", getString(R.string.v2ex));
